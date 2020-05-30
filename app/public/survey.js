@@ -35,7 +35,7 @@ questions.forEach((question, index) => {
 let submit = document.createElement("button");
 submit.setAttribute("type", "submit");
 submit.setAttribute("value", "Submit");
-
+submit.textContent = "Submit";
 form.appendChild(submit);
 
 function createSlider(questionID) {
@@ -43,7 +43,7 @@ function createSlider(questionID) {
 	slider.setAttribute("class", "slider");
 	let input = document.createElement("input");
 	input.setAttribute("type", "range");
-	input.setAttribute("min", "1");
+	input.setAttribute("min", "0");
 	input.setAttribute("max", "10");
 	input.setAttribute("name", questionID);
 	slider.appendChild(input);
