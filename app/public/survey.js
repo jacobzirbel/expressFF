@@ -80,7 +80,6 @@ form.addEventListener("submit", (e) => {
 	}
 	if (values[0].length) {
 		values.pop();
-		console.log(values);
 		$.ajax({
 			type: "POST",
 			url: "/api/friends",
@@ -93,8 +92,11 @@ form.addEventListener("submit", (e) => {
 		$("#modal").modal({ show: true });
 	}
 });
+
 function success(e) {
-	console.log("success");
+	$("#close").on("click", () => {
+		window.location.href = "/home";
+	});
 	let text = "";
 	e.forEach((e, i) => {
 		text += `${i + 1}: ${e.name} <br />`;
